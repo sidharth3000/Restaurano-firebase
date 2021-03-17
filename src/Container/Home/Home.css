@@ -1,0 +1,57 @@
+.home_parallax {
+    /* The image used */
+     background-image: url('../../Assets/table.jpg');
+   
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .background-image{
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+
+    filter: grayscale(100%);
+  }
+
+  .home_name{
+      color: white;
+      font-size: 100px;
+      text-align: center;
+      padding-top: 150px;
+      align-items: center;
+      z-index: 2;
+  }
+
+  .home_discover{
+     
+      text-align: center;
+  }
+
+  .home_cardholder{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .home_discover_img{
+      height: 100px;
+  }
+
+  .home_card{
+      margin: 30px;
+      padding: 30px;
+  }
+
+  .chefs{
+      text-align: center;
+      /* background-color: black; */
+      /* color: white; */
+  }

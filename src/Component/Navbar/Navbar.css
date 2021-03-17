@@ -17,4 +17,5 @@
     grid-template-columns: 0.5fr 3fr 1fr 1fr 1fr 1fr;
     /* text-align: center; */
     align-items: center;
+    background-color: rgba(228, 228, 228, 0.808);
 }
