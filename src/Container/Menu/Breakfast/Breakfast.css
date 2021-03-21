@@ -1,0 +1,9 @@
+.menu_cards{
+    margin: 120px 0px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+

@@ -9,6 +9,8 @@ import lunch from '../../Assets/lunch.png';
 import dinner from '../../Assets/dinner.png';
 import chef from '../../Assets/chef.jpg';
 
+
+
 import './Home.css'
 
 class Home extends Component {
@@ -20,17 +22,18 @@ class Home extends Component {
 
                 <div class="home_parallax">
                     <div className='home_name'>
+                        <span style={{fontSize:"50px"}}>Welcome To</span><br/>
                     <span style={{color: "#"}}>The</span> RESTURANO
                     </div>
                 </div>
 
                 <div className='home_discover'>
-                    <div>DISCOVER</div>
+                    <div className='home_discover_head'>DISCOVER</div>
 
                     <div className="home_cardholder">
                         <div className='home_card'>
                             <img className='home_discover_img' src={breakfast}></img>
-                            <div>Breakfast</div>
+                            <div className='home_time'>Breakfast</div>
                             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                  sed do eiusmod tempor incididunt ut labore et dolore magna
                                   aliqua.</div>
@@ -38,7 +41,7 @@ class Home extends Component {
 
                         <div className='home_card'>
                             <img className='home_discover_img' src={lunch}></img>
-                            <div>Lunch</div>
+                            <div className='home_time'>Lunch</div>
                             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                  sed do eiusmod tempor incididunt ut labore et dolore magna
                                   aliqua.</div>
@@ -46,7 +49,7 @@ class Home extends Component {
 
                         <div className='home_card'>
                             <img className='home_discover_img' src={dinner}></img>
-                            <div>Dinner</div>
+                            <div className='home_time'>Dinner</div>
                             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                  sed do eiusmod tempor incididunt ut labore et dolore magna
                                   aliqua.</div>
@@ -58,24 +61,24 @@ class Home extends Component {
 
                 <div className='chefs'>
 
-                    <div>Our Team</div>
+                    <div className='home_team_head'>Our Chefs</div>
 
                     <div className="home_cardholder">
-                        <div>
+                        <div className='chef_card'>
                             <img src={chef}></img>
-                            <div>Sidharth</div>
+                            <div className="chef_name">Sidharth</div>
                             <div>cooffee expert</div>
                         </div>
 
-                        <div>
+                        <div className='chef_card'>
                             <img src={chef}></img>
-                            <div>Sidharth</div>
+                            <div className="chef_name">Aditya</div>
                             <div>cooffee expert</div>
                         </div>
 
-                        <div>
+                        <div className='chef_card'>
                             <img src={chef}></img>
-                            <div>Sidharth</div>
+                            <div className="chef_name">Shubham</div>
                             <div>cooffee expert</div>
                         </div>
                     </div>

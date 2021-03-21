@@ -1,0 +1,38 @@
+.card{
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: black;
+    color: white;
+    margin: 10px;
+    align-self: center;
+    justify-self: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 0px 10px 10px 0px;
+   
+}
+
+.card_product{
+    width: 100%;
+}
+
+.card_right{
+    /* width: 100%; */
+    padding: 30px;
+    text-align: center;
+}
+
+.card_name{
+    font-size: 30px;
+    padding: 10px;
+}
+
+.buy{
+    background-color: brown;
+    margin: 15px;
+    width: 100px;
+    padding: 15px;
+    border-radius: 25px;
+    align-self: center;
+   justify-self: center;
+}

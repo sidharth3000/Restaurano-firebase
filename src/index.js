@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import '../node_modules/font-awesome/css/font-awesome.min.css'; 
+import { BrowserRouter } from 'react-router-dom';
 
-import Home from './Container/Home/Home'
+import App from './App';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
-  document.getElementById('root')
+const app = (
+  <BrowserRouter>
+      <App/>
+  </BrowserRouter>
 );
+
+ReactDOM.render (app,document.getElementById('root'));
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

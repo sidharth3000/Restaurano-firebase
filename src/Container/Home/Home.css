@@ -1,39 +1,28 @@
 .home_parallax {
-    /* The image used */
      background-image: url('../../Assets/table.jpg');
-   
-    /* Set a specific height */
-    min-height: 500px; 
-  
-    /* Create the parallax scrolling effect */
+    min-height: 620px; 
+
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
 
-  .background-image{
-    -webkit-filter: blur(5px);
-    -moz-filter: blur(5px);
-    -o-filter: blur(5px);
-    -ms-filter: blur(5px);
-    filter: blur(5px);
-
-    filter: grayscale(100%);
-  }
-
   .home_name{
       color: white;
       font-size: 100px;
       text-align: center;
-      padding-top: 150px;
+      padding-top: 200px;
       align-items: center;
       z-index: 2;
+      font-family: 'Fjalla One';
   }
 
   .home_discover{
      
       text-align: center;
+      border: 2px solid #CD0A00;
+      margin: 5px;
   }
 
   .home_cardholder{
@@ -48,10 +37,47 @@
   .home_card{
       margin: 30px;
       padding: 30px;
+      transition: 0.3s all;
+  }
+
+  .home_card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    /* background-color: #989898; */
+    cursor: pointer;
   }
 
   .chefs{
       text-align: center;
+      margin: 40px 0px;
       /* background-color: black; */
       /* color: white; */
+  }
+
+  .home_team_head{
+    font-size: 40px;
+    color: #CD0A00;
+    padding-bottom: 30px;
+  }
+
+  .home_discover_head{
+      font-size: 40px;
+      padding-top: 30px;
+      color: #CD0A00;
+  }
+
+  .home_time{
+      font-size: 20px;
+      padding: 5px;
+  }
+
+  .chef_card{
+      border: 2px solid  #CD0A00;
+      border-radius: 10px;
+      margin: 20px;
+      padding: 5px;
+  }
+
+  .chef_name{
+      font-size: 20px;
+      font-weight: bold;
   }
