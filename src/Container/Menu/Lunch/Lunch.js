@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-// import './Breakfast.css';
 import Navbar from '../../../Component/Navbar/Navbar';
 import Card from '../../../Component/Card/Card';
 import Footer from '../../../Component/Footer/Footer'

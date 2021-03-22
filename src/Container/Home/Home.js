@@ -4,10 +4,10 @@ import Navbar from '../../Component/Navbar/Navbar';
 import Footer from '../../Component/Footer/Footer'
 import Backdrop from '../../UI/Backdrop/Backdrop';
 
-import breakfast from '../../Assets/breakfast.png';
-import lunch from '../../Assets/lunch.png';
-import dinner from '../../Assets/dinner.png';
-import chef from '../../Assets/chef.jpg';
+// import breakfast from 'Assets/breakfast.png';
+// import lunch from 'Assets/lunch.png';
+// import dinner from 'Assets/dinner.png';
+// import chef from '../../Assets/chef.jpg';
 
 
 
@@ -32,7 +32,7 @@ class Home extends Component {
 
                     <div className="home_cardholder">
                         <div className='home_card'>
-                            <img className='home_discover_img' src={breakfast}></img>
+                            <img className='home_discover_img' src={'Assets/breakfast.png'}></img>
                             <div className='home_time'>Breakfast</div>
                             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                  sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -40,7 +40,7 @@ class Home extends Component {
                         </div>
 
                         <div className='home_card'>
-                            <img className='home_discover_img' src={lunch}></img>
+                            <img className='home_discover_img' src={'Assets/lunch.png'}></img>
                             <div className='home_time'>Lunch</div>
                             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                  sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -48,7 +48,7 @@ class Home extends Component {
                         </div>
 
                         <div className='home_card'>
-                            <img className='home_discover_img' src={dinner}></img>
+                            <img className='home_discover_img' src={'Assets/dinner.png'}></img>
                             <div className='home_time'>Dinner</div>
                             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                  sed do eiusmod tempor incididunt ut labore et dolore magna
@@ -65,19 +65,19 @@ class Home extends Component {
 
                     <div className="home_cardholder">
                         <div className='chef_card'>
-                            <img src={chef}></img>
+                            <img src={'../../Assets/chef.jpg'}></img>
                             <div className="chef_name">Sidharth</div>
                             <div>cooffee expert</div>
                         </div>
 
                         <div className='chef_card'>
-                            <img src={chef}></img>
+                            <img src={'../../Assets/chef.jpg'}></img>
                             <div className="chef_name">Aditya</div>
                             <div>cooffee expert</div>
                         </div>
 
                         <div className='chef_card'>
-                            <img src={chef}></img>
+                            <img src={'../../Assets/chef.jpg'}></img>
                             <div className="chef_name">Shubham</div>
                             <div>cooffee expert</div>
                         </div>

@@ -5,9 +5,8 @@ import Navbar from '../../../Component/Navbar/Navbar';
 import Card from '../../../Component/Card/Card';
 import Footer from '../../../Component/Footer/Footer'
 
-import Coffee from '../../../Assets/coffee.jpg';
-
 class Breakfast extends Component {
+
     render () {
     
         return(
@@ -15,8 +14,8 @@ class Breakfast extends Component {
                <Navbar/>
 
                <div className="menu_cards">
-                    <Card name="latte"/>
                     <Card name="coffee"/>
+                    <Card name="omelete"/>
                     <Card name="coffee"/>
                     <Card name="coffee"/>
                </div>

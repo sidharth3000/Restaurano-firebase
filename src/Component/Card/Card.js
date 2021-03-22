@@ -1,15 +1,23 @@
 import React, { Component } from 'react';
+import axios from "../../axios-orders";
 
 import './Card.css';
 
-import Coffee from '../../Assets/coffee.jpg'
-
 class Home extends Component {
+
+    purchaseContinueHandler = () => {
+        const order = {
+            item: "coffee"
+        }
+        axios.post('/orders.json', order)
+            .then(response => console.log(response))
+            .catch(error => console.log(error));
+    }
+
     render () {
-    
         return(
             <div className="card">
-                <img className="card_product" src={Coffee}/>
+                <img className="card_product" src={'Assets/' + this.props.name + '.jpg'}/>
                 <div className="card_right">
 
                     <div className="card_name">{this.props.name}</div>
@@ -21,7 +29,7 @@ class Home extends Component {
                     type specimen book.
                     </div>
 
-                    <div className="buy">Add to kart</div>
+                    <div className="buy" onClick={this.purchaseContinueHandler}>Add to kart</div>
                 </div>
             </div>
         ) ;
