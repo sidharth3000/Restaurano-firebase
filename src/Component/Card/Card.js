@@ -21,6 +21,7 @@ class Home extends Component {
                 <div className="card_right">
 
                     <div className="card_name">{this.props.name}</div>
+                    <div className="card_price">$7</div>
 
                     <div className="card_info">
                     Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -29,7 +30,7 @@ class Home extends Component {
                     type specimen book.
                     </div>
 
-                    <div className="buy" onClick={this.purchaseContinueHandler}>Add to kart</div>
+                    <div className="buy" onClick={this.purchaseContinueHandler}>Add To Basket</div>
                 </div>
             </div>
         ) ;

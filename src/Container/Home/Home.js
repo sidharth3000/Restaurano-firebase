@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 import Navbar from '../../Component/Navbar/Navbar';
 import Footer from '../../Component/Footer/Footer'
 import Backdrop from '../../UI/Backdrop/Backdrop';
-
-// import breakfast from 'Assets/breakfast.png';
-// import lunch from 'Assets/lunch.png';
-// import dinner from 'Assets/dinner.png';
-// import chef from '../../Assets/chef.jpg';
-
-
 
 import './Home.css'
 
@@ -31,14 +25,18 @@ class Home extends Component {
                     <div className='home_discover_head'>DISCOVER</div>
 
                     <div className="home_cardholder">
-                        <div className='home_card'>
+                        <Link to="/breakfast" className="link">
+                            <div className='home_card'>
                             <img className='home_discover_img' src={'Assets/breakfast.png'}></img>
                             <div className='home_time'>Breakfast</div>
                             <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                  sed do eiusmod tempor incididunt ut labore et dolore magna
                                   aliqua.</div>
-                        </div>
+                            </div>
+                        </Link>
 
+
+                    <Link to="/lunch" className="link">
                         <div className='home_card'>
                             <img className='home_discover_img' src={'Assets/lunch.png'}></img>
                             <div className='home_time'>Lunch</div>
@@ -46,7 +44,9 @@ class Home extends Component {
                                  sed do eiusmod tempor incididunt ut labore et dolore magna
                                   aliqua.</div>
                         </div>
+                    </Link>
 
+                    <Link to="/dinner" className="link">
                         <div className='home_card'>
                             <img className='home_discover_img' src={'Assets/dinner.png'}></img>
                             <div className='home_time'>Dinner</div>
@@ -54,6 +54,7 @@ class Home extends Component {
                                  sed do eiusmod tempor incididunt ut labore et dolore magna
                                   aliqua.</div>
                         </div>
+                    </Link>
                     </div>
 
                    

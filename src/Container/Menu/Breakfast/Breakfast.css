@@ -1,5 +1,19 @@
-.menu_cards{
+.menu{
     margin: 120px 0px;
+
+}
+
+.meal_name{
+   
+    font-size: 50px;
+    color: white;
+    padding: 10px;
+    padding-left: 45px;
+    background-color: brown;
+}
+
+.menu_cards{
+   margin-top: 20px;
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;

@@ -38,6 +38,12 @@
       margin: 30px;
       padding: 30px;
       transition: 0.3s all;
+      text-decoration: none;
+  }
+
+  .link{
+      text-decoration: none;
+      color: black;
   }
 
   .home_card:hover{
@@ -68,6 +74,7 @@
   .home_time{
       font-size: 20px;
       padding: 5px;
+      text-decoration: none;
   }
 
   .chef_card{
@@ -81,3 +88,4 @@
       font-size: 20px;
       font-weight: bold;
   }
+

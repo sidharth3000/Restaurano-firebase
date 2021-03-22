@@ -13,12 +13,20 @@ class Breakfast extends Component {
             <div>
                <Navbar/>
 
-               <div className="menu_cards">
-                    <Card name="coffee"/>
-                    <Card name="omelete"/>
-                    <Card name="coffee"/>
-                    <Card name="coffee"/>
+               <div className="menu">
+
+                <div className="meal_name">~Breakfast~</div>
+
+                <div className="menu_cards">
+                        <Card name="coffee"/>
+                        <Card name="omelete"/>
+                        <Card name="coffee"/>
+                        <Card name="coffee"/>
+                </div>
+
                </div>
+
+        
 
                <Footer/>
 

@@ -11,6 +11,8 @@ function App() {
   return (
     <div >
       <Route path="/breakfast" component={Breakfast} />
+      <Route path="/lunch" component={Lunch} />
+      <Route path="/dinner" component={Dinner} />
       <Route path="/" exact component={Home} />
     </div>
   );
