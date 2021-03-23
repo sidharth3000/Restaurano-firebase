@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import './Breakfast.css';
 import Navbar from '../../../Component/Navbar/Navbar';
 import Card from '../../../Component/Card/Card';
 import Footer from '../../../Component/Footer/Footer'
+import Modal from '../../../UI/Modal/Modal'
 
 class Breakfast extends Component {
 
@@ -12,6 +14,11 @@ class Breakfast extends Component {
         return(
             <div>
                <Navbar/>
+            
+               <Modal>
+                    <div>{this.props.item_name}</div>
+                    <div>{this.props.price}</div>
+               </Modal>
 
                <div className="menu">
 
@@ -35,6 +42,13 @@ class Breakfast extends Component {
     }
 }
 
+const mapStateToProps = state => {
+    return{
+        item_name: state.name,
+        price: state.price
+    }
+}
 
 
-export default Breakfast;
+
+export default connect(mapStateToProps)(Breakfast);

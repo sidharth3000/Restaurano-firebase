@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import axios from "../../axios-orders";
+import { connect } from 'react-redux';
 
 import './Card.css';
+import * as actionTypes from '../../Store/actions'
 
 class Home extends Component {
 
@@ -30,13 +32,24 @@ class Home extends Component {
                     type specimen book.
                     </div>
 
-                    <div className="buy" onClick={this.purchaseContinueHandler}>Add To Basket</div>
+                    <div className="buy" onClick={() => this.props.onOrder(this.props.name, 10)}>Add To Basket</div>
                 </div>
             </div>
         ) ;
     }
 }
 
+const mapStateToProps = state => {
+    return{
+        item_name: state.name,
+        price: state.price
+    }
+}
 
+const mapDispatchToProps = dispatch => {
+    return {
+        onOrder: (name,price) => dispatch({type: actionTypes.UPDATE_ING, name: name, price: price})
+    }
+}
 
-export default Home;
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

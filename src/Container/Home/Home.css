@@ -1,5 +1,5 @@
 .home_parallax {
-     /* background-image: url('Assets/table.jpg'); */
+     background-image: url('../../background/table.jpg');
     min-height: 620px; 
 
     background-attachment: fixed;
