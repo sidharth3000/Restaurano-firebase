@@ -1,20 +1,10 @@
 import React, { Component } from 'react';
-import axios from "../../axios-orders";
 import { connect } from 'react-redux';
 
 import './Card.css';
 import * as actionTypes from '../../Store/actions'
 
 class Home extends Component {
-
-    purchaseContinueHandler = () => {
-        const order = {
-            item: "coffee"
-        }
-        axios.post('/orders.json', order)
-            .then(response => console.log(response))
-            .catch(error => console.log(error));
-    }
 
     render () {
         return(
@@ -32,7 +22,7 @@ class Home extends Component {
                     type specimen book.
                     </div>
 
-                    <div className="buy" onClick={() => this.props.onOrder(this.props.name, 10)}>Add To Basket</div>
+                    <div className="buy" onClick={() => this.props.onOrderHandler(this.props.name, 10)}>Add To Basket</div>
                 </div>
             </div>
         ) ;
@@ -48,7 +38,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onOrder: (name,price) => dispatch({type: actionTypes.UPDATE_ING, name: name, price: price})
+        onOrderHandler: (name,price) => dispatch({type: actionTypes.PURCHASE_CONT, name: name, price: price})
     }
 }
 

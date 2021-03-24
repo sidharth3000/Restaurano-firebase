@@ -11,10 +11,9 @@ const footer = ( props ) => {
         <div className='footer'>
            <img src={'Assets/logo.png'} className='footer_logo'></img>
            <div className='footer_name'>RESTAURANO</div>
-           <div className='footer_p'>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                sed do eiusmod tempor incididunt ut labore et magna aliqua.
-                Mattis enim ut tellus elementum sagittis vitae et.
-                Sed turpis tincidunt
+           <div className='footer_p'>This is the last section of page and provides 
+           the user with options to contact the restaurant, feedback, information about
+           restaurant and  a help section to resolve doubts.
             </div>
 
             <div>

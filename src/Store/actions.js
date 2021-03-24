@@ -1,1 +1,2 @@
-export const UPDATE_ING = 'UPDATE_ING';
+export const PURCHASE_CONT = 'PURCHASE_CONT';
+export const PURCHASE_CANCEL = 'PURCHASE_CANCEL'

@@ -21,3 +21,26 @@
     justify-content: center;
 }
 
+.child_modal{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.xyz{
+text-align: right;
+}
+
+.modal_image{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.modal_item{
+    color: white;
+    font-size: 40px;
+}
+
+.modal_price{
+    color: white;
+    align-self: flex-start;
+}

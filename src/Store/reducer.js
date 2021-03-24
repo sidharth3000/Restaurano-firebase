@@ -3,18 +3,29 @@ import * as actionsTypes from './actions';
 const initialState = {
 
     name: null,
-    price: null
+    image: null,
+    price: null,
+    purchasing: false,
+    loading: false
 };
 
 const reducer = (state = initialState, action) => {
 
     switch(action.type){
-        case actionsTypes.UPDATE_ING:
+        case actionsTypes.PURCHASE_CONT:
             return{
                 ...state,
                 name: action.name,
-                price: action.price
+                image: action.image,
+                price: action.price,
+                purchasing: true
             };
+
+        case actionsTypes.PURCHASE_CANCEL:
+            return{
+                ...state,
+                purchasing: false
+            }
 
         default:
             return state;
