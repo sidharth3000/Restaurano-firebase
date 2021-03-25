@@ -7,12 +7,11 @@
     box-shadow: 1px 1px 1px black;
     padding: 16px;
     left: 30%;
-    top: 30%;
+    top: 20%;
     box-sizing: border-box;
     transition: all 0.3s ease-out;
     background-color: black;
     border: 1px solid white;
-    display: flex;
     border-radius: 5px;
 }
 
@@ -23,23 +22,3 @@
     }
 }
 
-.modal_continue{
-    display: inline;
-    background-color: white;
-    padding: 5px;
-    margin: 5px;
-    align-self: flex-end;
-    justify-self: flex-end;
-    border-radius: 5px;
-}
-
-.modal_cancel{
-    display: inline;
-    background-color: brown;
-    padding: 5px;
-    margin: 5px;
-    align-self: flex-end;
-    justify-self: center;
-    color: white;
-    border-radius: 5px;
-}

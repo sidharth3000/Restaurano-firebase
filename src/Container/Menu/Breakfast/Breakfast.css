@@ -26,12 +26,12 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.xyz{
-text-align: right;
+.menu_right{
+    position: relative;
 }
 
 .modal_image{
-    width: 100%;
+    height: 300px;
     border-radius: 10px;
 }
 
@@ -42,5 +42,29 @@ text-align: right;
 
 .modal_price{
     color: white;
-    align-self: flex-start;
 }
+
+.modal_continue{
+    display: inline;
+    background-color: white;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    margin-top: 100%;
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+}
+
+.modal_cancel{
+    display: inline;
+    background-color: brown;
+    padding: 5px;
+    margin: 5px;
+    color: white;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 5px;
+    right: 90px;
+}
+

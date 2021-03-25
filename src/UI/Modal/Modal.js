@@ -14,9 +14,6 @@ const modal = (props) => (
 
                 {props.children}
 
-                <div className="modal_cancel" onClick={props.purchseCancel}>Cancel</div>
-                <div className="modal_continue" onClick={props.purchaseContinue}>Continue</div>
-
         </div>
     </div>
 

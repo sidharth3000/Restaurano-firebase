@@ -4,18 +4,9 @@
 
 }
 
-.navbar_name{
-    display: inline;
-    bottom: 50px;
-    font-size: 40px;
-    /* text-align: center; */
-    /* align-items: center; */
-}
-
 .navbar_container{
     display: grid;
     grid-template-columns: 0.5fr 3fr 1fr 1fr 1fr 1fr;
-    /* text-align: center; */
     align-items: center;
     background-color: rgba(34, 34, 34, 0.76);
     position: fixed;
@@ -23,4 +14,37 @@
     top: 0px;
     border-bottom: 1px solid white;
     color: white;
+    justify-items: center;
+}
+
+.navbar_name{
+    display: inline;
+    bottom: 50px;
+    font-size: 40px;
+    justify-self: start;
+}
+
+
+.navbar_links{
+    padding: 10px 10px;
+    text-decoration: none;
+    
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+a:hover{
+    
+    border-bottom: 3px solid white; 
+}
+
+a.active,
+a:active{
+    font-weight: bold;
+    color: black;
+    background-color: white;
 }

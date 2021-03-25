@@ -1,0 +1,40 @@
+.checkout{
+    align-items: center;
+    text-align: center;
+}
+
+.checkout_name{
+    color: brown;
+    font-size: 50px;
+    text-align: center;
+}
+
+.checkout_input{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 5px;
+    width: 95%;
+    border: none;
+    border-radius: 5px;
+}
+
+.checkout_input_cont{
+    padding: 10px;
+}
+
+.checkout_order{
+    background-color: brown;
+    color: white;
+    margin: 10px 100px;
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+.checkout_cancel{
+    background-color: white;
+    color: black;
+    margin: 10px 100px;
+    padding: 10px;
+    border-radius: 5px;
+}

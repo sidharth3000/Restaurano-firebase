@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
+import {NavLink} from 'react-router-dom';
 
-// import Logo from '../../Assets/logo.png'
 import './Navbar.css'
 
 class Navbar extends Component {
@@ -13,8 +13,14 @@ class Navbar extends Component {
                     
                 </div>
                 <div className='navbar_name'>RESTURANO</div>
-               <div className="home">Home</div>
+                <NavLink to="/" exact>
+                    <div className="home navbar_links">Home</div>
+                </NavLink>
+               
+               <NavLink to="/orders" className="navbar_links" exact>
                <div className="orders">Orders</div>
+               </NavLink>
+               
                <div className="reservation">Reservation</div>
                <div className="feed">Feedback</div>
             </div>

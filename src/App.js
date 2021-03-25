@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { Route } from 'react-router-dom';
 
@@ -6,10 +5,12 @@ import Home from './Container/Home/Home';
 import Breakfast from './Container/Menu/Breakfast/Breakfast';
 import Lunch from './Container/Menu/Lunch/Lunch';
 import Dinner from './Container/Menu/Dinner/Dinner';
+import Orders from './Container/Orders/Orders'
 
 function App() {
   return (
     <div >
+      <Route path='/orders' component={Orders} />
       <Route path="/breakfast" component={Breakfast} />
       <Route path="/lunch" component={Lunch} />
       <Route path="/dinner" component={Dinner} />
