@@ -1,0 +1,25 @@
+.order{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    padding: 30px;
+    margin: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.order_item{
+    font-weight: bold;
+    font-size: 40px;
+
+}
+
+.order_price{
+ 
+    font-size: 50px;
+    color: brown;
+    justify-self: end;
+    font-weight: bold;
+}
+
+.order_lower{
+    padding: 5px;
+}

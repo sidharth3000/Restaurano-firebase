@@ -21,8 +21,14 @@ class Navbar extends Component {
                <div className="orders">Orders</div>
                </NavLink>
                
-               <div className="reservation">Reservation</div>
+               {/* <NavLink> */}
+                <div className="reservation">Reservation</div>
+               {/* </NavLink> */}
+               
+               <NavLink to="/feedback" className="navbar_links" exact>
                <div className="feed">Feedback</div>
+               </NavLink>
+               
             </div>
         ) ;
     }

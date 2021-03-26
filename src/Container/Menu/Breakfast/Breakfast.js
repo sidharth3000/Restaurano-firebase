@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 
 import './Breakfast.css';
 import Navbar from '../../../Component/Navbar/Navbar';
 import Card from '../../../Component/Card/Card';
 import Footer from '../../../Component/Footer/Footer'
-import Checkout from '../../../Component/Checkout/Checkout';
 import Modal from '../../../UI/Modal/Modal';
 import Backdrop from '../../../UI/Backdrop/Backdrop';
 import Spinner from '../../../UI/Spinner/Spinner';
@@ -19,8 +19,6 @@ class Breakfast extends Component {
         return(
             <div>
                <Navbar/>
-
-               <Checkout/>
             
                 <Backdrop show={this.props.show} purchseCancel={this.props.onOrderCancelHandler}/>
                 <Modal show={this.props.show} >
@@ -33,7 +31,7 @@ class Breakfast extends Component {
                             <div className="modal_item">{this.props.item_name}</div>
                             <div className="modal_price">{this.props.price}</div>
 
-                            <div className="modal_continue" onClick={this.props.onCheckoutCont} >Continue</div>
+                            <Link to="/checkout"><div className="modal_continue" >Continue</div></Link>
                             <div className="modal_cancel" onClick={this.props.onOrderCancelHandler}>Cancel</div>
                         </div>
 

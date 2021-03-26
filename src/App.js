@@ -5,11 +5,15 @@ import Home from './Container/Home/Home';
 import Breakfast from './Container/Menu/Breakfast/Breakfast';
 import Lunch from './Container/Menu/Lunch/Lunch';
 import Dinner from './Container/Menu/Dinner/Dinner';
-import Orders from './Container/Orders/Orders'
+import Orders from './Container/Orders/Orders';
+import Checkout from './Container/Checkout/Checkout';
+import Feedback from './Container/Feedback/Feedback';
 
 function App() {
   return (
     <div >
+      <Route path='/feedback' component={Feedback} />
+      <Route path='/checkout' component={Checkout} />
       <Route path='/orders' component={Orders} />
       <Route path="/breakfast" component={Breakfast} />
       <Route path="/lunch" component={Lunch} />

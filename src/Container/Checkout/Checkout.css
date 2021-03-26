@@ -15,7 +15,8 @@
     padding: 5px;
     width: 95%;
     border: none;
-    border-radius: 5px;
+    border-bottom: 1px solid brown;
+    color: brown;
 }
 
 .checkout_input_cont{
@@ -37,4 +38,9 @@
     margin: 10px 100px;
     padding: 10px;
     border-radius: 5px;
+}
+
+.checkout a{
+    color: black;
+    text-decoration: none;
 }

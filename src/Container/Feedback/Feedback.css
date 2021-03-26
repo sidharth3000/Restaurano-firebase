@@ -1,0 +1,63 @@
+.feedback_cont{
+    margin-top: 120px;
+}
+
+.pencil{
+    padding-right: 10px;
+}
+
+.feedback_head{
+    font-size: 50px;
+    color: white;
+    padding: 10px;
+    padding-left: 45px;
+    background-color: brown;
+    margin-bottom: 30px;
+    margin-bottom: 5px;
+}
+
+.review_write_bttn{
+    background-color: brown;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 0px 50px 50px 0px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.review{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.write_outer{
+    text-align: center;
+}
+
+.review_write{
+    text-align: center;
+    height: 300px;
+    width: 80%;
+    margin: 20px;
+    border: 2px solid brown;
+    border-radius: 10px;
+    color: brown;
+}
+
+.review_post{
+    background-color: brown;
+    padding: 10px;
+    margin: 10px 300px;
+    border-radius: 20px;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+}
+
+.review_rating{
+    text-align: center;
+    padding: 10px;
+    border: 2px solid brown;
+    border-radius: 10px;
+}

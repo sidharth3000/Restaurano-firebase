@@ -31,19 +31,19 @@
     
 }
 
-a{
+.navbar_container a{
     color: white;
     text-decoration: none;
     transition: all 0.3s;
 }
 
-a:hover{
+.navbar_container a:hover{
     
     border-bottom: 3px solid white; 
 }
 
-a.active,
-a:active{
+.navbar_container a.active,
+.navbar_container a:active{
     font-weight: bold;
     color: black;
     background-color: white;

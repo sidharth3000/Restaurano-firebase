@@ -36,35 +36,42 @@
 }
 
 .modal_item{
-    color: white;
+    color: black;
     font-size: 40px;
 }
 
 .modal_price{
-    color: white;
+    color: black;
 }
 
 .modal_continue{
     display: inline;
-    background-color: white;
-    padding: 5px;
+    background-color: brown;
+    padding: 10px;
     margin: 5px;
     border-radius: 5px;
     margin-top: 100%;
     position: absolute;
     bottom: 5px;
     right: 0px;
+    color: white;
 }
 
 .modal_cancel{
     display: inline;
-    background-color: brown;
-    padding: 5px;
+    padding: 10px;
     margin: 5px;
-    color: white;
     border-radius: 5px;
     position: absolute;
     bottom: 5px;
     right: 90px;
+    color: brown;
 }
+
+.child_modal a{
+    color: black;
+    text-decoration: none;
+
+}
+
 

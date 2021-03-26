@@ -6,6 +6,7 @@ import './Orders.css';
 import Navbar from '../../Component/Navbar/Navbar'
 import Footer from '../../Component/Footer/Footer'
 import Order from '../../Component/Order/Order'
+import Spinner from '../../UI/Spinner/Spinner'
 import * as actionTypes from '../../Store/actions'
 
 class Home extends Component {
@@ -33,17 +34,32 @@ class Home extends Component {
     }
 
     render () {
+
+        let content =  <div className="orderss">
+                            {this.state.orders.map(order =>(
+                                <Order 
+                                        key={order.id}
+                                        item={order.item}
+                                        name={order.name}
+                                        address={order.address}
+                                        phone={order.phone_number}
+                                        price={order.price}
+                                />
+                            ))}
+                        </div>
+
+        if(this.state.loading){
+            content = <Spinner/>
+        }
+
         return(
-            <div className="order">
+            <div>
                 <Navbar/>
-<div>
-   {this.state.orders.map(order =>(
-       <Order 
-            key={order.id}
-            item={order.item}
-       />
-   ))}
-</div>
+
+                <div className="orders_heading">ORDERS</div>
+
+                {content}
+                
                 <Footer/>
             </div>
         ) ;

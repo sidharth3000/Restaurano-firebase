@@ -22,7 +22,7 @@ class Home extends Component {
                     type specimen book.
                     </div>
 
-                    <div className="buy" onClick={() => this.props.onOrderHandler(this.props.name, 10)}>Add To Basket</div>
+                    <div className="buy" onClick={() => this.props.onOrderHandler(this.props.name, this.props.price)}>Add To Basket</div>
                 </div>
             </div>
         ) ;
