@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
+import Slide from 'react-reveal/Slide';
 
 import './Review.css'
 
 class Review extends Component {
     render () {
 
-        let stars =  <div>not rated</div>
+        let stars =  <i className="fa fa-star star"></i>
             
-        if(this.props.ratting==1){
+        if(this.props.ratting<=1){
             stars = <div>
                         <i className="fa fa-star star"></i>
                     </div>
@@ -49,7 +50,7 @@ class Review extends Component {
     
         return(
 
-            
+            <Slide left>        
             <div className="review_view">
 
                 <div className="review_stars">
@@ -59,8 +60,10 @@ class Review extends Component {
                <div className="review_body">
                    {this.props.body}
                 </div>
-               
+            
             </div>
+
+            </Slide>  
         ) ;
     }
 }

@@ -22,13 +22,14 @@
     bottom: 50px;
     font-size: 40px;
     justify-self: start;
+    font-family: 'Squada One';
 }
 
 
 .navbar_links{
     padding: 10px 10px;
     text-decoration: none;
-    
+    font-family: 'Asap', sans-serif;
 }
 
 .navbar_container a{
@@ -45,6 +46,6 @@
 .navbar_container a.active,
 .navbar_container a:active{
     font-weight: bold;
-    color: black;
+    color: brown;
     background-color: white;
 }

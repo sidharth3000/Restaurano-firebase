@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from "../../axios-orders";
+import HeadShake from 'react-reveal/HeadShake';
 
 import Navbar from '../../Component/Navbar/Navbar';
 import Footer from '../../Component/Footer/Footer';
@@ -10,8 +11,8 @@ import './Feedback.css'
 class Feedback extends Component {
 
     state = {
-        loading: false,
-        review: null,
+        loading: true,
+        review: "NA",
         stars: "not rated",
         reviews: []
     }
@@ -56,8 +57,37 @@ class Feedback extends Component {
             });
     }
 
+    onScroll () {
+        window.scrollBy(0,950)
+    }
+
+
     render () {
+
+        let posts =
+        <div>
+             <HeadShake>
+                <button className="review_write_bttn" onClick={this.onScroll}>
+                <i className="fa fa-pencil pencil"></i>
+                    Write a review
+                </button>
+                </HeadShake>
+
+                <div className="read_reviews">
+                        {this.state.reviews.map(review =>(
+                            <Review 
+                                    ratting={review.stars}
+                                    body={review.body}
+                            />
+                        ))}
+                    </div>
+        </div>
+       
     
+        if(this.state.loading){
+            posts=<Spinner/>
+        }
+
         return(
             <div>
                <Navbar/>
@@ -68,19 +98,7 @@ class Feedback extends Component {
                     Feedback
                 </div>
 
-                <button className="review_write_bttn">
-                <i className="fa fa-pencil pencil"></i>
-                    Write a review
-                </button>
-
-               <div className="read_reviews">
-                            {this.state.reviews.map(review =>(
-                                <Review 
-                                        ratting={review.stars}
-                                        body={review.body}
-                                />
-                            ))}
-                </div>
+               {posts}
 
                <div className="review">
 

@@ -10,7 +10,12 @@
     justify-self: center;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 0px 10px 10px 0px;
-   
+    font-family: 'Asap', sans-serif;
+    transition: all 0.3s;
+}
+
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.795);
 }
 
 .card_product{
@@ -31,12 +36,15 @@
 .card_price{
     display: inline;
     color: brown;
+    font-family: 'Playball', cursive;
+    font-size: 25px;
 }
 
 
 .card_info{
     font-size: 10px;
     padding: 20px 60px 10px 0px;
+    font-size: 10px;
 }
 
 
@@ -49,4 +57,22 @@
     text-align: center;
     justify-self: start;
     align-self: flex-end;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.buy:hover{
+    background-color: #C20500;
+}
+
+.veg{
+    color: green;
+}
+
+.non{
+    color:red
+}
+
+.egg{
+    color: yellow;
 }

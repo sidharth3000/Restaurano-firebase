@@ -15,14 +15,26 @@
       padding-top: 200px;
       align-items: center;
       z-index: 2;
-      font-family: 'Fjalla One';
+      font-family: 'Asap', sans-serif;
   }
 
+  .home_cursive{
+    font-family: 'Playball', cursive;
+    color: brown;
+}
+  
+
   .home_discover{
-     
+    font-family: 'Asap', sans-serif;
       text-align: center;
       border: 2px solid #CD0A00;
       margin: 5px;
+      
+  }
+
+  .home_desc{
+    font-family: 'Asap', sans-serif;
+    font-size: 12px;
   }
 
   .home_cardholder{
@@ -47,8 +59,7 @@
   }
 
   .home_card:hover{
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    /* background-color: #989898; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.616);
     cursor: pointer;
   }
 
@@ -63,29 +74,42 @@
     font-size: 40px;
     color: #CD0A00;
     padding-bottom: 30px;
+    font-family: 'Playball', cursive;
+    font-weight: bold;
   }
 
   .home_discover_head{
       font-size: 40px;
       padding-top: 30px;
       color: #CD0A00;
+      font-weight: bold;
+      font-family: 'Playball', cursive;
   }
 
   .home_time{
-      font-size: 20px;
+      font-size: 30px;
+
       padding: 5px;
       text-decoration: none;
   }
 
   .chef_card{
       border: 2px solid  #CD0A00;
-      border-radius: 10px;
       margin: 20px;
       padding: 5px;
+      padding-top: 35px;
+      background-color: brown;
   }
 
   .chef_name{
       font-size: 20px;
       font-weight: bold;
+      font-family: 'Asap', sans-serif;
+      color: white;
   }
+
+  .home_expert{
+    font-family: 'Playball', cursive;
+  }
+
 

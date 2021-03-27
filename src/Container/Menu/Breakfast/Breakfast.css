@@ -4,12 +4,12 @@
 }
 
 .meal_name{
-   
     font-size: 50px;
     color: white;
     padding: 10px;
     padding-left: 45px;
     background-color: brown;
+    font-family: 'Playball', cursive;
 }
 
 .menu_cards{
@@ -28,16 +28,19 @@
 
 .menu_right{
     position: relative;
+    font-family: 'Asap', sans-serif;
 }
 
 .modal_image{
     height: 300px;
     border-radius: 10px;
+    border: 1px solid black;
 }
 
 .modal_item{
     color: black;
     font-size: 40px;
+    
 }
 
 .modal_price{
@@ -55,6 +58,11 @@
     bottom: 5px;
     right: 0px;
     color: white;
+    transition: all 0.3s;
+}
+
+.modal_continue:hover{
+    background-color: #C20500;
 }
 
 .modal_cancel{
@@ -66,12 +74,18 @@
     bottom: 5px;
     right: 90px;
     color: brown;
+    cursor: pointer;
 }
 
 .child_modal a{
     color: black;
     text-decoration: none;
 
+}
+
+.modal_desc{
+    font-size: 10px;
+    padding-top: 50px;
 }
 
 

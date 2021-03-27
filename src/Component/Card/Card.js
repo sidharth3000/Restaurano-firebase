@@ -4,17 +4,28 @@ import { connect } from 'react-redux';
 import './Card.css';
 import * as actionTypes from '../../Store/actions'
 
-class Home extends Component {
+class Card extends Component {
 
     render () {
+
+        let veg = <i class="fa fa-circle non"></i>
+
+        if(this.props.veg==1){
+             veg = <i class="fa fa-circle veg"></i>
+        }
+
+        if(this.props.veg==2){
+            veg = <i class="fa fa-circle egg"></i>
+       }
+
         return(
             <div className="card">
                 <img className="card_product" src={'Assets/' + this.props.name + '.jpg'}/>
                 <div className="card_right">
 
                     <div className="card_name">{this.props.name}</div>
-                    <div className="card_price">$7</div>
-
+                    <div className="card_price">&#x20B9;{this.props.cost}</div>
+{veg}
                     <div className="card_info">
                     Lorem Ipsum is simply dummy text of the printing and typesetting
                     try. Lorem Ipsum has been the industry's standard dummy text ever since
@@ -22,7 +33,7 @@ class Home extends Component {
                     type specimen book.
                     </div>
 
-                    <div className="buy" onClick={() => this.props.onOrderHandler(this.props.name, this.props.price)}>Add To Basket</div>
+                    <div className="buy" onClick={() => this.props.onOrderHandler(this.props.name, this.props.cost)}>Add To Basket</div>
                 </div>
             </div>
         ) ;
@@ -42,4 +53,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect(mapStateToProps, mapDispatchToProps)(Card);

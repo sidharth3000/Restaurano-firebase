@@ -1,9 +1,10 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Lobster&family=Satisfy&family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Playball&display=swap');
 
 .App {
+  font-family: 'Dancing Script', cursive;
   text-align: center;
+  scroll-behavior: smooth;
 }
 
 .App-logo {

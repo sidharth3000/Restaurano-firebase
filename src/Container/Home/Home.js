@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
+import Bounce from 'react-reveal/Bounce';
 
 import Navbar from '../../Component/Navbar/Navbar';
 import Footer from '../../Component/Footer/Footer'
@@ -13,14 +14,18 @@ class Home extends Component {
         return(
             <div>
                 <Navbar/>
-
+                
                 <div class="home_parallax">
+                
                     <div className='home_name'>
-                        <span style={{fontSize:"50px"}}>Welcome To</span><br/>
-                    <span style={{color: "#"}}>The</span> RESTURANO
+                        <Bounce bottom> 
+                            <span style={{fontSize:"50px"}}>Welcome To</span><br/>
+                            <span style={{color: "#"}} className="home_cursive">The RESTURANO</span> 
+                        </Bounce>
                     </div>
+                    
                 </div>
-
+                
                 <div className='home_discover'>
                     <div className='home_discover_head'>DISCOVER</div>
 
@@ -29,7 +34,7 @@ class Home extends Component {
                             <div className='home_card'>
                             <img className='home_discover_img' src={'Assets/breakfast.png'}></img>
                             <div className='home_time'>Breakfast</div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            <div className="home_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                  sed do eiusmod tempor incididunt ut labore et dolore magna
                                   aliqua.</div>
                             </div>
@@ -40,7 +45,7 @@ class Home extends Component {
                         <div className='home_card'>
                             <img className='home_discover_img' src={'Assets/lunch.png'}></img>
                             <div className='home_time'>Lunch</div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            <div className="home_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                  sed do eiusmod tempor incididunt ut labore et dolore magna
                                   aliqua.</div>
                         </div>
@@ -50,7 +55,7 @@ class Home extends Component {
                         <div className='home_card'>
                             <img className='home_discover_img' src={'Assets/dinner.png'}></img>
                             <div className='home_time'>Dinner</div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                            <div className="home_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                  sed do eiusmod tempor incididunt ut labore et dolore magna
                                   aliqua.</div>
                         </div>
@@ -68,19 +73,19 @@ class Home extends Component {
                         <div className='chef_card'>
                             <img src={'../../Assets/chef.jpg'}></img>
                             <div className="chef_name">Sidharth</div>
-                            <div>cooffee expert</div>
+                            <div className="home_expert">cooffee expert</div>
                         </div>
 
                         <div className='chef_card'>
                             <img src={'../../Assets/chef.jpg'}></img>
                             <div className="chef_name">Aditya</div>
-                            <div>cooffee expert</div>
+                            <div className="home_expert">cooffee expert</div>
                         </div>
 
                         <div className='chef_card'>
                             <img src={'../../Assets/chef.jpg'}></img>
                             <div className="chef_name">Shubham</div>
-                            <div>cooffee expert</div>
+                            <div className="home_expert">cooffee expert</div>
                         </div>
                     </div>
                 </div>

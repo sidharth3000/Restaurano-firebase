@@ -10,11 +10,13 @@
 }
 
 .footer_name{
-    /* display: inline; */
+    font-family: 'Squada One';
+    padding-left: 10px;
 }
 
 .footer_p{
     padding: 50px 250px 0px 0px;
+    font-family: 'Asap', sans-serif;
 }
 
 .handle{

@@ -1,6 +1,7 @@
 .checkout{
     align-items: center;
     text-align: center;
+    font-family: 'Asap', sans-serif;
 }
 
 .checkout_name{
@@ -17,6 +18,7 @@
     border: none;
     border-bottom: 1px solid brown;
     color: brown;
+    font-family: 'Architects Daughter', cursive;
 }
 
 .checkout_input_cont{
@@ -29,7 +31,12 @@
     margin: 10px 100px;
     padding: 10px;
     border-radius: 5px;
-    
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.checkout_order:hover{
+    background-color: #C20500;
 }
 
 .checkout_cancel{
@@ -38,6 +45,7 @@
     margin: 10px 100px;
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .checkout a{

@@ -1,3 +1,7 @@
+*{
+    scroll-behavior: smooth;
+}
+
 .feedback_cont{
     margin-top: 120px;
 }
@@ -14,6 +18,7 @@
     background-color: brown;
     margin-bottom: 30px;
     margin-bottom: 5px;
+    font-family: 'Playball', cursive;
 }
 
 .review_write_bttn{
@@ -24,6 +29,7 @@
     border-radius: 0px 50px 50px 0px;
     cursor: pointer;
     margin-bottom: 20px;
+    font-family: 'Architects Daughter', cursive;
 }
 
 .review{
@@ -43,21 +49,34 @@
     border: 2px solid brown;
     border-radius: 10px;
     color: brown;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 25px;
 }
 
 .review_post{
     background-color: brown;
     padding: 10px;
     margin: 10px 300px;
+    margin-bottom: 30px; 
     border-radius: 20px;
     font-weight: bold;
     color: white;
     font-size: 20px;
+    font-family: 'Asap', sans-serif;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.review_post:hover{
+    background-color: #C20500;
 }
 
 .review_rating{
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     border: 2px solid brown;
     border-radius: 10px;
+    font-family: 'Architects Daughter', cursive;
+    font-size: 20px;
+    font-weight: bold;
 }
