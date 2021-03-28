@@ -2,12 +2,27 @@
     align-items: center;
     text-align: center;
     font-family: 'Asap', sans-serif;
+    
+}
+
+.back{
+    background-image: url('../../background/wine.jpg');
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .checkout_name{
     color: brown;
     font-size: 50px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .checkout_input{

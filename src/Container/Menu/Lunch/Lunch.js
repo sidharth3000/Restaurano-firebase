@@ -10,7 +10,7 @@ import Modal from '../../../UI/Modal/Modal';
 import Backdrop from '../../../UI/Backdrop/Backdrop';
 import Spinner from '../../../UI/Spinner/Spinner';
 import axios from "../../../axios-orders";
-import * as actionTypes from '../../../Store/actions';
+import * as actions from '../../../Store/actions/actions';
 
 class Dinner extends Component {
 
@@ -45,7 +45,7 @@ class Dinner extends Component {
 
                <div className="menu">
 
-                <div className="meal_name">Dinner</div>
+                <div className="meal_name">Lunch</div>
 
                 <div className="menu_cards">
                         <Card name="Pasta" cost="150" veg="1"/>
@@ -73,11 +73,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onOrderHandler: (name,price) => dispatch({type: actionTypes.PURCHASE_CONT, name: name, price: price}),
-        onOrderCancelHandler: () => dispatch({type: actionTypes.PURCHASE_CANCEL}),
+        onOrderHandler: (name,price) => dispatch(actions.purchaseCont(name, price)),
+        onOrderCancelHandler: () => dispatch(actions.purchaseCancel()),
 
-        onCheckoutCont: () => dispatch({type: actionTypes.CHECKOUT_CONT}),
-        onCheckoutCancel: () => dispatch({type: actionTypes.CHECKOUT_CANCEL})
     }
 }
 

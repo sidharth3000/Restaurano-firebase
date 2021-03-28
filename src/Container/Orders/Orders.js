@@ -7,7 +7,7 @@ import Navbar from '../../Component/Navbar/Navbar'
 import Footer from '../../Component/Footer/Footer'
 import Order from '../../Component/Order/Order'
 import Spinner from '../../UI/Spinner/Spinner'
-import * as actionTypes from '../../Store/actions'
+import * as actions from '../../Store/actions/actions'
 
 class Home extends Component {
 
@@ -75,7 +75,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onOrderHandler: (name,price) => dispatch({type: actionTypes.PURCHASE_CONT, name: name, price: price})
+        onOrderHandler: (name,price) => dispatch(actions.purchaseCont(name,price))
     }
 }
 

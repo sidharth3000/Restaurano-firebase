@@ -28,6 +28,10 @@ class Navbar extends Component {
                <NavLink to="/feedback" className="navbar_links" exact>
                <div className="feed">Feedback</div>
                </NavLink>
+
+               <NavLink to="/authenticate" className="navbar_links" exact>
+               <div className="feed">Authenticate</div>
+               </NavLink>
                
             </div>
         ) ;

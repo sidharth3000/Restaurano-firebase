@@ -6,7 +6,7 @@
 
 .navbar_container{
     display: grid;
-    grid-template-columns: 0.5fr 3fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 0.5fr 3fr 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     background-color: rgba(34, 34, 34, 0.76);
     position: fixed;

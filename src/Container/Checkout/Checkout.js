@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from "../../axios-orders";
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 
 import './Checkout.css';
 import Modal from '../../UI/Modal/Modal';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 import Spinner from '../../UI/Spinner/Spinner';
-import * as actionTypes from '../../Store/actions';
+import * as actions from '../../Store/actions/actions';
 
 class Checkout extends Component {
 
@@ -16,6 +16,7 @@ class Checkout extends Component {
         name: null,
         address: null,
         phone: null,
+        ordered: false
 
     }
 
@@ -43,6 +44,7 @@ class Checkout extends Component {
         axios.post('/orders.json', order)
             .then(response => {
                 this.setState({loading: false});
+                this.setState({ordered: true})
             })
             .catch(error => {
                 this.setState({loading: false});
@@ -51,7 +53,14 @@ class Checkout extends Component {
 
     render () {
 
-        let checkout =  <Modal show={true} >
+        let orders = null;
+        if(this.state.ordered){
+            orders = <Redirect to="/orders"/>
+        }
+
+        let checkout =  <div className="back">
+        
+                        <Modal show={true} >
                             <div className="checkout">
                                 <div className="checkout_name">Checkout</div>
 
@@ -71,13 +80,13 @@ class Checkout extends Component {
                                 <Link to='/'><div className="checkout_cancel">Cancel</div></Link>
                             </div>
                         </Modal>
-
+                        </div>
         if(this.state.loading){
             checkout = <Spinner/>
         }
         return(
             <div>
-
+{orders}
                 <Backdrop show={true}/>
                {checkout}
             </div>
@@ -94,8 +103,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onCheckoutHandler: (name,price) => dispatch({type: actionTypes.CHECKOUT_CONT}),
-        onCheckoutCancelHandler: () => dispatch({type: actionTypes.CHECKOUT_CANCEL})
+        onCheckoutHandler: (name,price) => dispatch(actions.checkoutCont()),
+        onCheckoutCancelHandler: () => dispatch(actions.checkoutCancel())
     }
 }
 

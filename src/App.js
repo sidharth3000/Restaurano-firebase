@@ -8,10 +8,12 @@ import Dinner from './Container/Menu/Dinner/Dinner';
 import Orders from './Container/Orders/Orders';
 import Checkout from './Container/Checkout/Checkout';
 import Feedback from './Container/Feedback/Feedback';
+import Auth from './Container/Auth/Auth';
 
 function App() {
   return (
-    <div >
+    <div>
+      <Route path='/authenticate' component={Auth} />
       <Route path='/feedback' component={Feedback} />
       <Route path='/checkout' component={Checkout} />
       <Route path='/orders' component={Orders} />

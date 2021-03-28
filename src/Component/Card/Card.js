@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import './Card.css';
-import * as actionTypes from '../../Store/actions'
+import * as actions from '../../Store/actions/actions'
 
 class Card extends Component {
 
@@ -49,7 +49,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onOrderHandler: (name,price) => dispatch({type: actionTypes.PURCHASE_CONT, name: name, price: price})
+        onOrderHandler: (name,price) => dispatch(actions.purchaseCont(name, price))
     }
 }
 
