@@ -7,7 +7,12 @@ const initialState = {
     price: null,
     purchasing: false,
     loading: false,
-    checkout: false
+    checkout: false,
+    token: null,
+    userId: null,
+    error: null,
+    loading: false,
+    buying: false
 };
 
 const reducer = (state = initialState, action) => {
@@ -39,6 +44,48 @@ const reducer = (state = initialState, action) => {
                 ...state,
                 checkout: false
             }
+
+        case actionsTypes.AUTH_START: 
+            return{
+                ...state,
+                error: null,
+                loading: true
+            }
+
+        case actionsTypes.AUTH_SUCCESS:
+            return{
+                ...state,
+                token: action.idToken,
+                userId: action.userId,
+                error: null,
+                loading: false
+            }
+
+        case actionsTypes.AUTH_FAIL:
+            return{
+                ...state,
+                error: action.error,
+                loading: false
+            }
+
+        case actionsTypes.AUTH_LOGOUT:
+            return{
+                ...state,
+                token: null,
+                userId: null
+            }
+
+        case actionsTypes.BUY_CHANGE: 
+        return{
+            ...state,
+            buying: true
+        }
+
+        case actionsTypes.BUY_NOT: 
+        return{
+            ...state,
+            buying: false
+        }
 
         default:
             return state;

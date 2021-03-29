@@ -43,7 +43,8 @@ class Card extends Component {
 const mapStateToProps = state => {
     return{
         item_name: state.name,
-        price: state.price
+        price: state.price,
+        
     }
 }
 

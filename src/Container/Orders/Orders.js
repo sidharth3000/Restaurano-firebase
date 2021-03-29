@@ -17,7 +17,7 @@ class Home extends Component {
     }
 
     componentDidMount () {
-        axios.get('/orders.json')
+        axios.get('/orders.json?auth=' + this.props.token)
         .then(res => {
             const fetchedOrders = [];
             for(let key in res.data) {
@@ -69,7 +69,8 @@ class Home extends Component {
 const mapStateToProps = state => {
     return{
         item_name: state.name,
-        price: state.price
+        price: state.price,
+        token: state.token
     }
 }
 

@@ -35,7 +35,7 @@ class Dinner extends Component {
                                 1500s
                             </div>
 
-                            <Link to="/checkout"><div className="modal_continue" >Continue</div></Link>
+                            <Link to={this.props.isAuth ? "/checkout" : "/authenticate"}><div className="modal_continue" >{this.props.isAuth ? "Continue" : "Authenticate"}</div></Link>
                             <div className="modal_cancel" onClick={this.props.onOrderCancelHandler}>Cancel</div>
                         </div>
 
@@ -68,6 +68,7 @@ const mapStateToProps = state => {
         item_name: state.name,
         price: state.price,
         show: state.purchasing,
+        isAuth: state.token !== null
     }
 }
 

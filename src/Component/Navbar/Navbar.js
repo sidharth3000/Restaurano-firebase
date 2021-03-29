@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import {NavLink} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
+import { connect } from 'react-redux';
+import * as actions from '../../Store/actions/actions';
 
 import './Navbar.css'
 
@@ -17,9 +19,11 @@ class Navbar extends Component {
                     <div className="home navbar_links">Home</div>
                 </NavLink>
                
+                {this.props.isAuth ?
                <NavLink to="/orders" className="navbar_links" exact>
                <div className="orders">Orders</div>
-               </NavLink>
+               </NavLink>:
+               null}
                
                {/* <NavLink> */}
                 <div className="reservation">Reservation</div>
@@ -29,15 +33,31 @@ class Navbar extends Component {
                <div className="feed">Feedback</div>
                </NavLink>
 
-               <NavLink to="/authenticate" className="navbar_links" exact>
-               <div className="feed">Authenticate</div>
-               </NavLink>
+            {this.props.isAuth ?
+                <Link to="/" className="navbar_links" exact>
+               <div className="feed" onClick={this.props.onLogoutHandler}>Logout</div>
+                </Link>
                
+               :
+               <Link to="/authenticate" className="navbar_links" exact>
+               <div className="feed">Authenticate</div>
+                </Link>
+}              
             </div>
         ) ;
     }
 }
 
+const mapStateToProps = state => {
+    return{
+        isAuth: state.token !== null
+    }
+}
 
+const mapDispatchToProps = dispatch => {
+    return {
+        onLogoutHandler: () => dispatch(actions.logout())
+    }
+}
 
-export default Navbar;
+export default connect(mapStateToProps, mapDispatchToProps)(Navbar);

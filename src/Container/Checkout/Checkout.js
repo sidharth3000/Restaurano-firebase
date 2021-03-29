@@ -41,7 +41,7 @@ class Checkout extends Component {
             phone_number: this.state.phone,
             price: this.props.price
         }
-        axios.post('/orders.json', order)
+        axios.post('/orders.json?auth=' + this.props.token, order)
             .then(response => {
                 this.setState({loading: false});
                 this.setState({ordered: true})
@@ -97,7 +97,9 @@ class Checkout extends Component {
 const mapStateToProps = state => {
     return{
         item: state.name,
-        price: state.price
+        price: state.price,
+        token: state.token,
+        isAuth: state.token !== null
     }
 }
 

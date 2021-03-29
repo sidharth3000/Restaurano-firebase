@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
 import Bounce from 'react-reveal/Bounce';
+import { connect } from 'react-redux';
 
 import Navbar from '../../Component/Navbar/Navbar';
 import Footer from '../../Component/Footer/Footer'
 import Backdrop from '../../UI/Backdrop/Backdrop';
+import * as actions from '../../Store/actions/actions';
 
 import './Home.css'
 
 class Home extends Component {
+
+    componentDidMount() {
+        this.props.onBuycancel();
+      }
+
     render () {
     
         return(
@@ -97,6 +104,10 @@ class Home extends Component {
     }
 }
 
+const mapDispatchToProps = dispatch => {
+    return {
+        onBuycancel: () => dispatch(actions.buyNot())
+    }
+}
 
-
-export default Home;
+export default connect(null, mapDispatchToProps)(Home);
