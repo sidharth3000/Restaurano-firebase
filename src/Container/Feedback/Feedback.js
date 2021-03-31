@@ -6,7 +6,7 @@ import Navbar from '../../Component/Navbar/Navbar';
 import Footer from '../../Component/Footer/Footer';
 import Review from '../../Component/Review/Review';
 import Spinner from '../../UI/Spinner/Spinner';
-import './Feedback.css'
+import './Feedback.css';
 
 class Feedback extends Component {
 

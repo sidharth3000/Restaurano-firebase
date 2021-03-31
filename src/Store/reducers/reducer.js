@@ -5,6 +5,7 @@ const initialState = {
     name: null,
     image: null,
     price: null,
+    delivery: "cheapest",
     purchasing: false,
     loading: false,
     checkout: false,
@@ -12,7 +13,9 @@ const initialState = {
     userId: null,
     error: null,
     loading: false,
-    buying: false
+    buying: false,
+    count: 1,
+    reserved: false
 };
 
 const reducer = (state = initialState, action) => {

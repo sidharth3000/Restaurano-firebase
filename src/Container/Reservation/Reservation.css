@@ -1,0 +1,26 @@
+.reserve{
+    text-align: center;
+    padding: 100px;
+}
+
+.res_input_outer{
+
+}
+
+.res_input{
+    padding: 5px;
+    margin: 20px;
+    border-radius: 10px;
+    border: 1px solid brown;
+    color: brown;
+}
+
+.reserve_bttn{
+    background-color: brown;
+    margin: 20px 420px;
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}

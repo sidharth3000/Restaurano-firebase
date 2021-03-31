@@ -33,13 +33,11 @@
 }
 
 .auth_error{
-    /* position: absolute; */
     top: 0px;
     background-color: rgba(224, 11, 11, 0.829);
     color: white;
     z-index: 1000;
     width: 100%;
-    /* margin: 0px 100px; */
     text-align: center;
     padding: 10px;
     right: auto;

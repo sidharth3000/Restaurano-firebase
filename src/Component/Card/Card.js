@@ -32,8 +32,9 @@ class Card extends Component {
                     1500s, when an unknown printer took a galley of type and scrambled it to make
                     type specimen book.
                     </div>
-
-                    <div className="buy" onClick={() => this.props.onOrderHandler(this.props.name, this.props.cost)}>Add To Basket</div>
+                    
+                    <div onClick={this.props.onBuy}> <div className="buy" onClick={() => this.props.onOrderHandler(this.props.name, this.props.cost)} >Add To Basket</div></div>
+                   
                 </div>
             </div>
         ) ;
@@ -50,7 +51,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onOrderHandler: (name,price) => dispatch(actions.purchaseCont(name, price))
+        onOrderHandler: (name,price) => dispatch(actions.purchaseCont(name, price)),
+        onBuy : () => dispatch(actions.buyChange())
     }
 }
 

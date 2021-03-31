@@ -12,10 +12,6 @@ import './Auth.css'
 
 class Auth extends Component {
 
-    componentDidMount() {
-        this.props.onBuycancel();
-      }
-
     state = {
         email: null,
         password: null,
@@ -104,8 +100,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return{
-        onAuth: (email, password, signup) => dispatch(actions.auth(email, password, signup)),
-        onBuycancel: () => dispatch(actions.buyNot())
+        onAuth: (email, password, signup) => dispatch(actions.auth(email, password, signup))
     }
 };
 

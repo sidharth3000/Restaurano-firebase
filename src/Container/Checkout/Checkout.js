@@ -16,7 +16,8 @@ class Checkout extends Component {
         name: null,
         address: null,
         phone: null,
-        ordered: false
+        ordered: false,
+        delivery: "cheapest"
 
     }
 
@@ -32,6 +33,10 @@ class Checkout extends Component {
         this.setState({phone: evt.target.value});
     }
 
+    onDeliveryChangeHandler = (evt) => {
+        this.setState({delivery: evt.target.value});
+    }
+
     purchaseContinueHandler = () => {
         this.setState({loading: true});
         const order = {
@@ -39,7 +44,8 @@ class Checkout extends Component {
             name: this.state.name,
             address: this.state.address,
             phone_number: this.state.phone,
-            price: this.props.price
+            price: this.props.price,
+            delivery: this.state.delivery
         }
         axios.post('/orders.json?auth=' + this.props.token, order)
             .then(response => {
@@ -50,9 +56,9 @@ class Checkout extends Component {
                 this.setState({loading: false});
             });
     }
+    
 
     render () {
-
         let orders = null;
         if(this.state.ordered){
             orders = <Redirect to="/orders"/>
@@ -74,6 +80,13 @@ class Checkout extends Component {
 
                                 <div className="checkout_input_cont">
                                     <input className="checkout_input" type="text" placeholder="Phone Number" maxLength="10" onChange={this.onPhoneChangeHandler}></input>
+                                </div>
+
+                                <div className="checkout_input_cont" onChange={this.onDeliveryChangeHandler}>
+                                    <select className="checkout_input" >
+                                        <option value="cheapest">Cheapest</option>
+                                        <option value="fastest">Fastest</option>
+                                    </select>
                                 </div>
 
                                 <div className="checkout_order" onClick={this.purchaseContinueHandler}>Order</div>
@@ -99,7 +112,8 @@ const mapStateToProps = state => {
         item: state.name,
         price: state.price,
         token: state.token,
-        isAuth: state.token !== null
+        isAuth: state.token !== null,
+        buying: state.buying
     }
 }
 

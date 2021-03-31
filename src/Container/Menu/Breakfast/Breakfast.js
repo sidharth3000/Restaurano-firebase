@@ -14,8 +14,10 @@ import * as actions from '../../../Store/actions/actions';
 
 class Breakfast extends Component {
 
+  
+
     render () {
-    
+        
         return(
             <div>
                <Navbar/>
@@ -36,7 +38,7 @@ class Breakfast extends Component {
                                 1500s
                             </div>
 
-                            <Link to={this.props.isAuth ? "/checkout" : "/authenticate"}><div className="modal_continue" onClick={this.props.onBuy}>{this.props.isAuth ? "Continue" : "Authenticate"}</div></Link>
+                            <Link to={this.props.isAuth ? "/checkout" : "/authenticate"} onClick={this.props.onBuy}><div className="modal_continue" >{this.props.isAuth ? "Continue" : "Authenticate"}</div></Link>
                             <div className="modal_cancel" onClick={this.props.onOrderCancelHandler}>Cancel</div>
                         </div>
 

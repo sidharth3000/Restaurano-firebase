@@ -44,6 +44,7 @@ class Home extends Component {
                                         address={order.address}
                                         phone={order.phone_number}
                                         price={order.price}
+                                        delivery={order.delivery}
                                 />
                             ))}
                         </div>

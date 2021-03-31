@@ -25,9 +25,9 @@ class Navbar extends Component {
                </NavLink>:
                null}
                
-               {/* <NavLink> */}
+               <NavLink to="/reservation" className="navbar_links" exact>
                 <div className="reservation">Reservation</div>
-               {/* </NavLink> */}
+               </NavLink>
                
                <NavLink to="/feedback" className="navbar_links" exact>
                <div className="feed">Feedback</div>

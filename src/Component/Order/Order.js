@@ -23,12 +23,16 @@ class Order extends Component {
                             {this.props.name}
                     </div>
 
-                    <div className="order.address">
+                    <div className="order_detail">
                             {this.props.address}
                     </div>
                     
-                    <div className="order.phone">
+                    <div className="order_detail">
                             {this.props.phone}
+                    </div>
+
+                    <div className="order_detail">
+                            {this.props.delivery}
                     </div>
                 </div>
                 
