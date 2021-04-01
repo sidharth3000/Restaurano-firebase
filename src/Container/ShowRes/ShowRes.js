@@ -1,33 +1,33 @@
-import React, { Component, useImperativeHandle } from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import axios from '../../axios-orders'
 
-import './Orders.css';
+import './ShowRes.css';
 import Navbar from '../../Component/Navbar/Navbar'
 import Footer from '../../Component/Footer/Footer'
-import Order from '../../Component/Order/Order'
+import Res from '../../Component/Res/Res'
 import Spinner from '../../UI/Spinner/Spinner'
 import * as actions from '../../Store/actions/actions'
 
 class Home extends Component {
 
     state = {
-        orders: [],
+        reservations: [],
         loading: true
     }
 
     componentDidMount () {
         const query = '?auth=' + this.props.token + '&orderBy="userId"&equalTo="' + this.props.userId + '"';
-        axios.get( '/orders.json' + query)
+        axios.get('/reservation.json' + query)
         .then(res => {
-            const fetchedOrders = [];
+            const fetchedres = [];
             for(let key in res.data) {
-                fetchedOrders.push({
+                fetchedres.push({
                     ...res.data[key],
                     id: key
                 });
             }
-            this.setState({loading: false, orders: fetchedOrders})
+            this.setState({loading: false, reservations: fetchedres})
         })
         .catch(err =>{
             this.setState({loading: false})
@@ -35,17 +35,13 @@ class Home extends Component {
     }
 
     render () {
-console.log(this.props.token)
-        let content =  <div className="orderss">
-                            {this.state.orders.map(order =>(
-                                <Order 
-                                        key={order.id}
-                                        item={order.item}
-                                        name={order.name}
-                                        address={order.address}
-                                        phone={order.phone_number}
-                                        price={order.price}
-                                        delivery={order.delivery}
+
+        let content =  <div className="ress">
+                           {this.state.reservations.map(reservations =>(
+                                <Res 
+                                        // key={order.id}
+                                        members={reservations.members}
+                                        date={reservations.date}
                                 />
                             ))}
                         </div>
@@ -58,7 +54,7 @@ console.log(this.props.token)
             <div>
                 <Navbar/>
 
-                <div className="orders_heading">ORDERS</div>
+                <div className="orders_heading">Your Reservations</div>
 
                 {content}
                 

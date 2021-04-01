@@ -1,6 +1,8 @@
 .reserve{
     text-align: center;
-    padding: 100px;
+    padding: 30px;
+    margin: 60px;
+    border: 1px solid brown;
 }
 
 .res_input_outer{
@@ -23,4 +25,10 @@
     color: white;
     font-size: 20px;
     cursor: pointer;
+    transition: all 0.3s;
 }
+
+.reserve_bttn:hover{
+    background-color: red;
+}
+

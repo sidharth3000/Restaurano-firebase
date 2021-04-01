@@ -11,6 +11,7 @@ import Orders from './Container/Orders/Orders';
 import Checkout from './Container/Checkout/Checkout';
 import Feedback from './Container/Feedback/Feedback';
 import Reservation from './Container/Reservation/Reservation';
+import ShowRes from './Container/ShowRes/ShowRes';
 import Auth from './Container/Auth/Auth';
 import * as actions from './Store/actions/actions';
 
@@ -25,27 +26,29 @@ class App extends Component {
   render() {
 
     let routes =  <div>
-                   <Route path='/authenticate' component={Auth} />
-                    <Route path='/feedback' component={Feedback} />
-                    <Route path='/checkout' component={Checkout} />
-                    <Route path='/orders' component={Orders} />
-                    <Route path="/breakfast" component={Breakfast} />
-                    <Route path="/lunch" component={Lunch} />
-                    <Route path="/dinner" component={Dinner} />
-                    <Route path="/" exact component={Home} />
-                    <Route path="/reservation" component={Reservation} />
+                   <Route path='/authenticate' component={Auth} exact/>
+                    <Route path='/feedback' component={Feedback} exact/>
+                    <Route path='/checkout' component={Checkout} exact/>
+                    <Route path='/orders' component={Orders} exact/>
+                    <Route path="/breakfast" component={Breakfast} exact/>
+                    <Route path="/lunch" component={Lunch} exact/>
+                    <Route path="/dinner" component={Dinner} exact/>
+                    <Route path="/" exact component={Home} exact/>
+                    <Route path="/reservation" component={Reservation} exact/>
+                    <Route path="/show" component={ShowRes} exact/>
                   </div>
      if(this.props.isAuth){
        routes=   <div>
-                    <Route path='/authenticate' component={Auth} />
-                    <Route path='/feedback' component={Feedback} />
-                    <Route path='/checkout' component={Checkout} />
-                    <Route path='/orders' component={Orders} />
-                    <Route path="/breakfast" component={Breakfast} />
-                    <Route path="/lunch" component={Lunch} />
-                    <Route path="/dinner" component={Dinner} />
-                    <Route path="/reservation" component={Reservation} />
-                    <Route path="/" exact component={Home} />
+                    <Route path='/authenticate' component={Auth} exact/>
+                    <Route path='/feedback' component={Feedback} exact/>
+                    <Route path='/checkout' component={Checkout} exact/>
+                    <Route path='/orders' component={Orders} exact/>
+                    <Route path="/breakfast" component={Breakfast} exact/>
+                    <Route path="/lunch" component={Lunch} exact/>
+                    <Route path="/dinner" component={Dinner} exact/>
+                    <Route path="/reservation" component={Reservation} exact/>
+                    <Route path="/" exact component={Home} exact/>
+                    <Route path="/show" component={ShowRes} exact/>
                   </div>
      }
 

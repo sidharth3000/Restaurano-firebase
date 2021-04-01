@@ -29,7 +29,7 @@
     border-radius: 0px 50px 50px 0px;
     cursor: pointer;
     margin-bottom: 20px;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Asap', sans-serif;
 }
 
 .review{
@@ -49,7 +49,7 @@
     border: 2px solid brown;
     border-radius: 10px;
     color: brown;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Asap', sans-serif;
     font-size: 25px;
 }
 
@@ -76,7 +76,7 @@
     padding: 5px;
     border: 2px solid brown;
     border-radius: 10px;
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Asap', sans-serif;
     font-size: 20px;
     font-weight: bold;
 }

@@ -45,7 +45,8 @@ class Checkout extends Component {
             address: this.state.address,
             phone_number: this.state.phone,
             price: this.props.price,
-            delivery: this.state.delivery
+            delivery: this.state.delivery,
+            userId: this.props.userId
         }
         axios.post('/orders.json?auth=' + this.props.token, order)
             .then(response => {
@@ -113,7 +114,8 @@ const mapStateToProps = state => {
         price: state.price,
         token: state.token,
         isAuth: state.token !== null,
-        buying: state.buying
+        buying: state.buying,
+        userId: state.userId
     }
 }
 
