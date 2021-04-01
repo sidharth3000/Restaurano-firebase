@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import axios from "../../axios-orders";
 import HeadShake from 'react-reveal/HeadShake';
+import { connect } from 'react-redux';
+import {Link} from 'react-router-dom';
 
 import Navbar from '../../Component/Navbar/Navbar';
 import Footer from '../../Component/Footer/Footer';
 import Review from '../../Component/Review/Review';
 import Spinner from '../../UI/Spinner/Spinner';
+import * as actions from '../../Store/actions/actions';
 import './Feedback.css';
 
 class Feedback extends Component {
@@ -14,10 +17,31 @@ class Feedback extends Component {
         loading: true,
         review: "NA",
         stars: "not rated",
-        reviews: []
+        reviews: [],
+        orders: []
     }
+       
 
     componentDidMount () {
+
+        const query = '?auth=' + this.props.token + '&orderBy="userId"&equalTo="' + this.props.userId + '"';
+        axios.get( '/orders.json' + query)
+        .then(res => {
+            const fetchedOrders = [];
+            for(let key in res.data) {
+                fetchedOrders.push({
+                    ...res.data[key],
+                    id: key
+                });
+            }
+            this.setState({loading: false, orders: fetchedOrders})
+        })
+        .catch(err =>{
+            this.setState({loading: false})
+        })
+
+
+
         axios.get('/reviews.json')
         .then(res => {
             const fetchedReviews = [];
@@ -43,6 +67,8 @@ class Feedback extends Component {
     }
 
     postReviewHandler = () => {
+        
+       if( (this.state.orders.length) > 0){
         this.setState({loading: true});
         const review = {
             body: this.state.review,
@@ -51,14 +77,22 @@ class Feedback extends Component {
         axios.post('/reviews.json', review)
             .then(response => {
                 this.setState({loading: false});
+                window.scrollTo(0,0)
             })
             .catch(error => {
                 this.setState({loading: false});
             });
+       }
+
+       else{
+           alert("You need to order something first to write a review!")
+       }
+
+       
     }
 
     onScroll () {
-        window.scrollBy(0,950)
+        window.scrollTo(0,100000000000000000000000000000000000000)
     }
 
 
@@ -87,8 +121,25 @@ class Feedback extends Component {
         if(this.state.loading){
             posts=<Spinner/>
         }
+       
+        const query = '?auth=' + this.props.token + '&orderBy="userId"&equalTo="' + this.props.userId + '"';
+        axios.get( '/orders.json' + query)
+        .then(res => {
+            const fetchedOrders = [];
+            for(let key in res.data) {
+                fetchedOrders.push({
+                    ...res.data[key],
+                    id: key
+                });
+            }
+            this.setState({loading: false, orders: fetchedOrders})
+        })
+        .catch(err =>{
+            this.setState({loading: false})
+        })
 
         return(
+            
             <div>
                <Navbar/>
 
@@ -110,7 +161,12 @@ class Feedback extends Component {
                        <input type="text" placeholder="write your review here" className="review_write" onChange={this.onReviewChangeHandler}></input>
                    </div>
 
-                   <div className="review_post" onClick={this.postReviewHandler}>Post</div>
+                    {this.props.isAuth ? 
+                    <div className="review_post" onClick={this.postReviewHandler}>Post</div>
+                     :
+                     <Link to="/authenticate"><div className="review_post" >Authenticate</div></Link>
+                     }
+                   
                </div>
 
                </div>
@@ -122,4 +178,25 @@ class Feedback extends Component {
     }
 }
 
-export default Feedback;
+const mapStateToProps = state => {
+    return{
+        item_name: state.name,
+        price: state.price,
+        show: state.purchasing,
+        isAuth: state.token !== null,
+        buying: state.buying,
+        token: state.token,
+        userId: state.userId
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onOrderHandler: (name,price) => dispatch(actions.purchaseCont(name, price)),
+        onOrderCancelHandler: () => dispatch(actions.purchaseCancel()),
+        onBuy : () => dispatch(actions.buyChange())
+
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Feedback);

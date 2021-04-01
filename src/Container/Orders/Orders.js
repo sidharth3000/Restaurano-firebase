@@ -27,6 +27,7 @@ class Home extends Component {
                     id: key
                 });
             }
+            console.log("setting");
             this.setState({loading: false, orders: fetchedOrders})
         })
         .catch(err =>{
@@ -35,7 +36,6 @@ class Home extends Component {
     }
 
     render () {
-console.log(this.props.token)
         let content =  <div className="orderss">
                             {this.state.orders.map(order =>(
                                 <Order 

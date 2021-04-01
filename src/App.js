@@ -22,6 +22,10 @@ class App extends Component {
     this.props.onTryAutoSignup();
   }
 
+  componentDidMount(){
+    document.title = "Resturano"
+  }
+
 
   render() {
 
