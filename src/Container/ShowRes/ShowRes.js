@@ -17,6 +17,7 @@ class Home extends Component {
     }
 
     componentDidMount () {
+        window.scrollTo(0,0)
         const query = '?auth=' + this.props.token + '&orderBy="userId"&equalTo="' + this.props.userId + '"';
         axios.get('/reservation.json' + query)
         .then(res => {

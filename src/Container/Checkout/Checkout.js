@@ -18,7 +18,6 @@ class Checkout extends Component {
         phone: null,
         ordered: false,
         delivery: "cheapest"
-
     }
 
     onNameChangeHandler = (evt) => {
@@ -40,7 +39,7 @@ class Checkout extends Component {
     purchaseContinueHandler = () => {
         this.setState({loading: true});
         const order = {
-            item: this.props.item,
+            item: [this.props.item],
             name: this.state.name,
             address: this.state.address,
             phone_number: this.state.phone,
@@ -66,7 +65,7 @@ class Checkout extends Component {
         }
 
         let checkout =  <div className="back">
-        
+         <div className="abs" >RESTURANO</div>
                         <Modal show={true} >
                             <div className="checkout">
                                 <div className="checkout_name">Checkout</div>
@@ -100,7 +99,8 @@ class Checkout extends Component {
         }
         return(
             <div>
-{orders}
+               
+                {orders}
                 <Backdrop show={true}/>
                {checkout}
             </div>

@@ -5,6 +5,7 @@ const initialState = {
     name: null,
     image: null,
     price: null,
+    desc: "aloooosaddddddddddddddddddddddddddddddddddd",
     delivery: "cheapest",
     purchasing: false,
     loading: false,
@@ -16,17 +17,20 @@ const initialState = {
     buying: false,
     count: 1,
     reserved: false
+   
 };
 
 const reducer = (state = initialState, action) => {
 
     switch(action.type){
         case actionsTypes.PURCHASE_CONT:
+            console.log(action.desc)
             return{
                 ...state,
                 name: action.name,
                 image: action.image,
                 price: action.price,
+                desc: action.desc,
                 purchasing: true
             };
 

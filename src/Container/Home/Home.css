@@ -1,5 +1,5 @@
 .home_parallax {
-     background-image: url('../../background/chefs.jpg');
+     background-image: url('../../background/chefs.jpeg');
     min-height: 620px; 
 
     background-attachment: fixed;
@@ -106,10 +106,15 @@
       font-weight: bold;
       font-family: 'Asap', sans-serif;
       color: white;
+      padding: 5px;
   }
 
   .home_expert{
     font-family: 'Playball', cursive;
+  }
+
+  .chef_img{
+    width: 200px;
   }
 
 

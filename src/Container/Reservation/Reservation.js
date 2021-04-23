@@ -10,6 +10,9 @@ import Spinner from '../../UI/Spinner/Spinner'
 import * as actions from '../../Store/actions/actions'
 
 class Reservation extends Component {
+    componentDidMount () {
+        window.scrollTo(0,0)
+    }
 
     state = {
         members: null,
@@ -28,21 +31,41 @@ class Reservation extends Component {
     }
 
     postResHandler = () => {
-        console.log("clicked")
-        this.setState({loading: true});
-        const res = {
-            members: this.state.members,
-            date: this.state.date,
-            userId: this.props.userId
+
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() ).padStart(2, '0'); //January is 0!
+        var yyyy = today.getFullYear();
+
+        var today = new Date(yyyy,mm,dd)
+
+        var orderDate = new Date(this.state.date);
+
+        if(orderDate<today){
+            alert("You can't reserve a table in past date.")
         }
-        axios.post('/reservation.json?auth=' + this.props.token, res)
-            .then(response => {
-                this.setState({loading: false});
-                this.setState({redirected: true})
-            })
-            .catch(error => {
-                this.setState({loading: false});
+
+        else if(this.state.members>8){
+            alert("Number of members cannot be greater then 8!")
+        }
+
+        else{
+            this.setState({loading: true});
+            const res = {
+                members: this.state.members,
+                date: this.state.date,
+                userId: this.props.userId
+            }
+            axios.post('/reservation.json?auth=' + this.props.token, res)
+                .then(response => {
+                    this.setState({loading: false});
+                    this.setState({redirected: true})
+                })
+                .catch(error => {
+                    this.setState({loading: false});
             });
+        }
+       
     }
 
     render () {
@@ -61,7 +84,8 @@ class Reservation extends Component {
                                     </div>
 
                                     <div className="res_input_outer">
-                                        <input placeholder="Date DD//MM" className="res_input" maxLength="5" onChange={this.onDateChangeHandler}></input>
+                                        <input type="date" className="res_input res_date" onChange={this.onDateChangeHandler}></input>
+                                        
                                     </div>
 
                                     <div className="reserve_bttn" onClick={this.postResHandler}>Reserve</div>

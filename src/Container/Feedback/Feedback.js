@@ -23,7 +23,7 @@ class Feedback extends Component {
        
 
     componentDidMount () {
-
+        window.scrollTo(0,0)
         const query = '?auth=' + this.props.token + '&orderBy="userId"&equalTo="' + this.props.userId + '"';
         axios.get( '/orders.json' + query)
         .then(res => {

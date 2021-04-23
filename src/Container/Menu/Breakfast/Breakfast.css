@@ -39,12 +39,15 @@
 
 .modal_item{
     color: black;
-    font-size: 40px;
-    
+    font-size: 30px;
+    padding: 0px 25px;
+    color: brown;
 }
 
 .modal_price{
     color: black;
+    padding: 5px 25px;
+    color: brown;
 }
 
 .modal_continue{
@@ -84,8 +87,9 @@
 }
 
 .modal_desc{
-    font-size: 10px;
-    padding-top: 50px;
+    font-size: 15px;
+    padding: 50px 25px;
+
 }
 
 

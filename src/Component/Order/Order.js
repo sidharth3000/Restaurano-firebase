@@ -11,6 +11,8 @@ class Order extends Component {
                 <div className="order">
 
                     <div className="order_item">
+                          
+                            
                         {this.props.item}
                     </div>
 

@@ -37,12 +37,22 @@
     background-color: rgba(224, 11, 11, 0.829);
     color: white;
     z-index: 1000;
-    width: 100%;
     text-align: center;
     padding: 10px;
     right: auto;
 }
+.abs{
+    background-color: brown;
+    font-size: 30px;
+    margin-bottom: 40px;
+    padding: 5px;
+    color: white;
+    text-align: center;
+}
 
+.checkout_cancel{
+    text-decoration: none;
+}
 
 
 

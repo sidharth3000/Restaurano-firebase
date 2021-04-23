@@ -45,6 +45,7 @@ class Auth extends Component {
         }
 
         let form = <Modal show={true} >
+             <div className="abs">RESTURANO</div>
                         <div className="auth_form">
                             <div className="auth_mode" onClick={this.switchAuthModeHandker}>
                                 Switch to {this.state.signup ? "SING-IN" : "SIGN-UP"}
@@ -58,7 +59,7 @@ class Auth extends Component {
                                 <input className="checkout_input" type="password" placeholder="Password" onChange={this.onPasswordChangeHandler}></input>
                             </div>
 
-                            <div className="checkout_order" onClick={this.onSubmitHandler}>Submit</div>
+                            <div className="checkout_order" onClick={this.onSubmitHandler}>{this.state.signup ? "SING-UP" : "SIGN-IN"}</div>
                            <Link to="/"> <div className="checkout_cancel">Cancel</div></Link>
                         </div>
                     </Modal>

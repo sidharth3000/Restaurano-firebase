@@ -18,11 +18,8 @@ import * as actions from './Store/actions/actions';
 
 class App extends Component {
 
-  componentDidMount () {
-    this.props.onTryAutoSignup();
-  }
-
   componentDidMount(){
+    this.props.onTryAutoSignup();
     document.title = "Resturano"
   }
 

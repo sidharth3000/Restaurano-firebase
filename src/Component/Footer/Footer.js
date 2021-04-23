@@ -17,7 +17,7 @@ const footer = ( props ) => {
                 <i className="fa fa-facebook-square handle"></i>
                 <i className="fa fa-instagram handle"></i>
                 <i className="fa fa-twitter handle"></i>
-                <i class="fa fa-github handle"></i>
+                <a href="https://github.com/sidharth3000/Restaurano"><i class="fa fa-github handle"></i></a>
             </div>
 
             <div className='footer_strip'></div>
