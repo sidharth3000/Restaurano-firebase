@@ -89,6 +89,13 @@ class Checkout extends Component {
                                     </select>
                                 </div>
 
+                                <div className="checkout_input_cont">
+                                    <select className="checkout_input" >
+                                        <option value="cheapest">Cash On Delivery</option>
+                                        <option value="fastest">Online Payment</option>
+                                    </select>
+                                </div>
+
                                 <div className="checkout_order" onClick={this.purchaseContinueHandler}>Order</div>
                                 <Link to='/'><div className="checkout_cancel">Cancel</div></Link>
                             </div>
